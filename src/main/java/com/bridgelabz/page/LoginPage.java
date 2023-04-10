@@ -25,7 +25,7 @@ public class LoginPage extends BaseClass {
         return new HomePage();
     }
 
-    public String verifyLoginPageTitle(){
+    public String verifyLoginPageTitle() {
         return driver.getTitle();
     }
 }

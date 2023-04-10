@@ -27,7 +27,7 @@ public class RegistrationPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    public HomePage registrtion(String uname, String confirmMail,String dName,String pwd) {
+    public HomePage registrtion(String uname, String confirmMail, String dName, String pwd) {
         username.sendKeys(uname);
         confirmEmail.sendKeys(confirmMail);
         password.sendKeys(pwd);
@@ -39,7 +39,7 @@ public class RegistrationPage extends BaseClass {
         return new HomePage();
     }
 
-    public String verifyRegistrationPageTitle(){
+    public String verifyRegistrationPageTitle() {
         return driver.getTitle();
     }
 }

@@ -21,7 +21,7 @@ public class RegistrationPageTest extends BaseClass {
 
     @Test
     public void verifyRegistrationPageTitleTest() {
-       String registrationPageTitle = registrationPage.verifyRegistrationPageTitle();
+        String registrationPageTitle = registrationPage.verifyRegistrationPageTitle();
         Assert.assertEquals(registrationPageTitle, "Sign up - Spotify");
     }
 
@@ -31,8 +31,8 @@ public class RegistrationPageTest extends BaseClass {
     }
 
     @Test(dataProvider = "getRegistrationTestData")
-    public void registrationTest(String username, String confirmmail,String password,String displayName) {
-        homePage = registrationPage.registrtion(username,confirmmail , password,displayName);
+    public void registrationTest(String username, String confirmmail, String password, String displayName) {
+        homePage = registrationPage.registrtion(username, confirmmail, password, displayName);
 
     }
 
