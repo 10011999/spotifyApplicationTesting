@@ -17,24 +17,25 @@ public class RegistrationPage extends BaseClass {
     private WebElement displayName;
 
 //    @FindBy(xpath = "//select[@id='month']']")
-//    private WebElement month;
-//    @FindBy(xpath = "//input[@id='day']")
-//    private WebElement day;
-//    @FindBy(xpath = "//input[@id='year']")
-//    private WebElement year;
+    private WebElement month;
+
+    @FindBy(id = "day")
+    private WebElement day;
+    @FindBy(id = "year")
+    private WebElement year;
 
     public RegistrationPage() {
         PageFactory.initElements(driver, this);
     }
 
-    public HomePage registrtion(String uname, String confirmMail, String dName, String pwd) {
+    public HomePage registrtion(String uname, String confirmMail, String dName, String pwd,String months,String days,String years) {
         username.sendKeys(uname);
         confirmEmail.sendKeys(confirmMail);
         password.sendKeys(pwd);
         displayName.sendKeys(dName);
-//        month.sendKeys(months);
-//        day.sendKeys(days);
-//        year.sendKeys(years);
+        month.sendKeys(months);
+        day.sendKeys(days);
+        year.sendKeys(years);
 
         return new HomePage();
     }

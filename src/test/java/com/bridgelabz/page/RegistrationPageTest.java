@@ -19,8 +19,7 @@ public class RegistrationPageTest extends BaseClass {
         registrationPage = new RegistrationPage();
     }
 
-    @Test
-    public void verifyRegistrationPageTitleTest() {
+    @Test    public void verifyRegistrationPageTitleTest() {
         String registrationPageTitle = registrationPage.verifyRegistrationPageTitle();
         Assert.assertEquals(registrationPageTitle, "Sign up - Spotify");
     }
@@ -31,8 +30,8 @@ public class RegistrationPageTest extends BaseClass {
     }
 
     @Test(dataProvider = "getRegistrationTestData")
-    public void registrationTest(String username, String confirmmail, String password, String displayName) {
-        homePage = registrationPage.registrtion(username, confirmmail, password, displayName);
+    public void registrationTest(String username, String confirmmail, String password, String displayName, String month, String day, String year) {
+        homePage = registrationPage.registrtion(username, confirmmail, password, displayName, month, day, year);
 
     }
 
